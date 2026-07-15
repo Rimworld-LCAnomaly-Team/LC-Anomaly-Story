@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Control</defName>
+    <label>Control</label>
+    <description>Work assignment, containment stability, and multi-target scheduling.</description>
+    <displayOrder>10</displayOrder>
+    <minimumPhase>1</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_ControlTeam</coreThingDef>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Information</defName>
+    <label>Information</label>
+    <description>Abnormality research, intelligence collection, and risk forecasting.</description>
+    <displayOrder>20</displayOrder>
+    <minimumPhase>2</minimumPhase>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Training</defName>
+    <label>Training</label>
+    <description>Employee growth, experience, and survival capability.</description>
+    <displayOrder>30</displayOrder>
+    <minimumPhase>2</minimumPhase>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Security</defName>
+    <label>Security</label>
+    <description>Containment breach response, alarms, and facility defense.</description>
+    <displayOrder>40</displayOrder>
+    <minimumPhase>3</minimumPhase>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Welfare</defName>
+    <label>Welfare</label>
+    <description>Employee recovery, mental stability, and long-term health.</description>
+    <displayOrder>50</displayOrder>
+    <minimumPhase>3</minimumPhase>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Extraction</defName>
+    <label>Extraction</label>
+    <description>PE-Box, Enkephalin, and E.G.O production.</description>
+    <displayOrder>60</displayOrder>
+    <minimumPhase>4</minimumPhase>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Architecture</defName>
+    <label>Architecture</label>
+    <description>Facility-wide integration and terminal company projects.</description>
+    <displayOrder>70</displayOrder>
+    <minimumPhase>5</minimumPhase>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+</Defs>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="..\LocalDllPaths.props" Condition="Exists('..\LocalDllPaths.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E454284-A9BE-43A9-82E6-4E2E95A4C68B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LCAnomalyStory</RootNamespace>
+    <AssemblyName>LCAnomalyStory</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>latest</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\1.6\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\1.6\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(HarmonyAssembliesDir)\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="LCAnomalyCore">
+      <HintPath>$(LCAnomalyCoreAssembliesDir)\LCAnomalyCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>$(RimWorldManagedDir)\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(RimWorldManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(RimWorldManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(RimWorldManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap.cs" />
+    <Compile Include="Compatibility\ManagedResearch.cs" />
+    <Compile Include="Compatibility\Core16LegacyTypes.cs" />
+    <Compile Include="Components\GameComponent_CompanyDevelopment.cs" />
+    <Compile Include="Conditions\DevelopmentConditions.cs" />
+    <Compile Include="Debug\DevelopmentDebugActions.cs" />
+    <Compile Include="Defs\CompanyDevelopmentDef.cs" />
+    <Compile Include="Defs\CompanyDepartmentDef.cs" />
+    <Compile Include="Defs\CompanyDirectiveDef.cs" />
+    <Compile Include="Defs\CompanyExaminationDef.cs" />
+    <Compile Include="Examinations\CompanyExaminationWorker.cs" />
+    <Compile Include="Examinations\ExaminationContext.cs" />
+    <Compile Include="Examinations\ExaminationEffects.cs" />
+    <Compile Include="Patches\CoreEventPatches.cs" />
+    <Compile Include="Patches\ResearchPatches.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rewards\DevelopmentRewards.cs" />
+    <Compile Include="UI\MainTabWindow_CompanyDevelopment.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

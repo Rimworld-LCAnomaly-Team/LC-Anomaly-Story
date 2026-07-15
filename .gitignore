@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+*.user
+*.suo
+*.pdb
+.vs/
+Source/1.6/LocalDllPaths.props
+.runtime-test/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>LCStory_CompanyDevelopment</defName>
+    <label>company development</label>
+    <description>Review company milestones, department development, and unlock conditions.</description>
+    <tabWindowClass>LCAnomalyStory.UI.MainTabWindow_CompanyDevelopment</tabWindowClass>
+    <order>46</order>
+  </MainButtonDef>
+</Defs>
+
