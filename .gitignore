@@ -6,3 +6,8 @@
 .vs/
 Source/1.6/LocalDllPaths.props
 .runtime-test/
+
+# .NET 10 build intermediates
+**/obj/
+**/bin/
+*.pdb

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LCStory_WindowTitle>公司发展 — 阶段 {0}</LCStory_WindowTitle>
+  <LCStory_NoGameComponent>公司发展组件当前不可用。</LCStory_NoGameComponent>
+  <LCStory_SelectNode>请选择一个发展节点。</LCStory_SelectNode>
+  <LCStory_Status_Completed>已完成</LCStory_Status_Completed>
+  <LCStory_Status_Available>可推进</LCStory_Status_Available>
+  <LCStory_Status_Locked>未开放</LCStory_Status_Locked>
+  <LCStory_PhaseDepartmentAndKind>阶段 {0} · 部门：{1} · 类型：{2}</LCStory_PhaseDepartmentAndKind>
+  <LCStory_NodeKind_Milestone>公司里程碑</LCStory_NodeKind_Milestone>
+  <LCStory_NodeKind_DepartmentTask>部门任务</LCStory_NodeKind_DepartmentTask>
+  <LCStory_NodeKind_StageGate>阶段考核</LCStory_NodeKind_StageGate>
+  <LCStory_Prerequisites>前置节点</LCStory_Prerequisites>
+  <LCStory_Conditions>完成条件</LCStory_Conditions>
+  <LCStory_Rewards>解锁结果</LCStory_Rewards>
+  <LCStory_None>无</LCStory_None>
+  <LCStory_ApproveNode>批准发展节点</LCStory_ApproveNode>
+  <LCStory_ApproveNodeLocked>完成全部前置节点和条件后才能批准该节点。</LCStory_ApproveNodeLocked>
+  <LCStory_NodeAlreadyCompleted>该发展节点已经完成。</LCStory_NodeAlreadyCompleted>
+  <LCStory_NodeCompletesAutomatically>满足全部条件后，该节点将自动完成。</LCStory_NodeCompletesAutomatically>
+  <LCStory_Condition_Statistic>统计进度</LCStory_Condition_Statistic>
+  <LCStory_Condition_ThingCount>已建设设施</LCStory_Condition_ThingCount>
+  <LCStory_Condition_HoldingPlatform>收容平台</LCStory_Condition_HoldingPlatform>
+  <LCStory_Condition_AnomalyCount>已登记异想体</LCStory_Condition_AnomalyCount>
+  <LCStory_Condition_StudyLevel>最高异想体研究等级</LCStory_Condition_StudyLevel>
+  <LCStory_Condition_ValidWorks>有效异想体工作次数</LCStory_Condition_ValidWorks>
+  <LCStory_Condition_PEBox>新增 PE-Box</LCStory_Condition_PEBox>
+  <LCStory_Condition_Examination>综合考核</LCStory_Condition_Examination>
+  <LCStory_Condition_DepartmentPriority>优先发展部门</LCStory_Condition_DepartmentPriority>
+  <LCStory_Condition_AnyNode>可替代发展路线</LCStory_Condition_AnyNode>
+  <LCStory_ExamObjective>考核目标</LCStory_ExamObjective>
+  <LCStory_ExamState_Unavailable>不可用</LCStory_ExamState_Unavailable>
+  <LCStory_ExamState_Active>进行中</LCStory_ExamState_Active>
+  <LCStory_ExamState_Cooldown>恢复冷却</LCStory_ExamState_Cooldown>
+  <LCStory_ExamState_Ready>可开始</LCStory_ExamState_Ready>
+  <LCStory_ExamState_Passed>已通过</LCStory_ExamState_Passed>
+  <LCStory_StartExam>开始综合考核</LCStory_StartExam>
+  <LCStory_ExamTimeRemaining>剩余时间：{0}</LCStory_ExamTimeRemaining>
+  <LCStory_ExamCooldownRemaining>距离再次尝试：{0}</LCStory_ExamCooldownRemaining>
+  <LCStory_ExamPrerequisitesMissing>完成前置运营要求后才能开始该考核。</LCStory_ExamPrerequisitesMissing>
+  <LCStory_GameHours>游戏小时</LCStory_GameHours>
+  <LCStory_ExamStartedTitle>考核开始：{0}</LCStory_ExamStartedTitle>
+  <LCStory_ExamPassedTitle>考核通过：{0}</LCStory_ExamPassedTitle>
+  <LCStory_ExamPassedText>公司在“{0}”期间证明了所需的运营能力。</LCStory_ExamPassedText>
+  <LCStory_ExamFailedTitle>考核失败：{0}</LCStory_ExamFailedTitle>
+  <LCStory_ExamFailedText>考核结束前未满足全部目标。恢复冷却结束后可以重新尝试。</LCStory_ExamFailedText>
+  <LCStory_ExamStartUnavailable>当前无法开始该考核。</LCStory_ExamStartUnavailable>
+  <LCStory_ExamStartAnotherActive>已有一项考核正在进行。</LCStory_ExamStartAnotherActive>
+  <LCStory_ExamStartAlreadyPassed>该考核已经通过。</LCStory_ExamStartAlreadyPassed>
+  <LCStory_ExamStartCooldown>考核仍处于恢复冷却中。</LCStory_ExamStartCooldown>
+  <LCStory_ExamStartWorkerError>考核扩展组件初始化失败，请检查日志。</LCStory_ExamStartWorkerError>
+  <LCStory_ExamWorkerFailure>考核扩展组件运行异常，本次尝试已安全结束。</LCStory_ExamWorkerFailure>
+  <LCStory_ExamProgressWorkerError>无法读取考核扩展组件的进度，请检查日志。</LCStory_ExamProgressWorkerError>
+  <LCStory_Reward_Generic>发展奖励</LCStory_Reward_Generic>
+  <LCStory_Reward_Research>解锁：{0}</LCStory_Reward_Research>
+  <LCStory_Reward_Department>开放部门：{0}</LCStory_Reward_Department>
+  <LCStory_ResearchManagedExternally>{0} 由公司发展系统接管。</LCStory_ResearchManagedExternally>
+  <LCStory_NodeCompletedTitle>发展完成：{0}</LCStory_NodeCompletedTitle>
+  <LCStory_NodeCompletedText>公司已经完成“{0}”发展节点。</LCStory_NodeCompletedText>
+  <LCStory_DirectiveObjective>指令目标</LCStory_DirectiveObjective>
+  <LCStory_DirectivePanel>动态指令</LCStory_DirectivePanel>
+  <LCStory_NoActiveDirective>当前没有动态指令。冷却结束后将下发新指令。</LCStory_NoActiveDirective>
+  <LCStory_DirectiveReceived>收到新指令：{0}</LCStory_DirectiveReceived>
+  <LCStory_DirectiveCompleted>指令完成：{0}</LCStory_DirectiveCompleted>
+  <LCStory_DirectiveFailed>指令失败：{0}</LCStory_DirectiveFailed>
+  <LCStory_DepartmentPriority>优先部门：{0}</LCStory_DepartmentPriority>
+</LanguageData>
