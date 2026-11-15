@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LanguageData>
-  <LCStory_Directive_ControlledWorkCycle.label>受控工作周期</LCStory_Directive_ControlledWorkCycle.label>
-  <LCStory_Directive_ControlledWorkCycle.description>在指令结束前完成三次有效异想体工作。</LCStory_Directive_ControlledWorkCycle.description>
-  <LCStory_Directive_PEBoxQuota.label>PE-Box 配额</LCStory_Directive_PEBoxQuota.label>
-  <LCStory_Directive_PEBoxQuota.description>在指令结束前生产十二点 PE-Box。</LCStory_Directive_PEBoxQuota.description>
-</LanguageData>

@@ -4,9 +4,9 @@
 
 本文档用于向参与开发的 AI 助手说明本 submod 的目标、架构边界和推荐实现方式。
 
-本 submod 依赖 **LC Anomaly Core（RimWorld 1.6）**，目标是建立一套模仿《脑叶公司》发展历史的独立进程系统。玩家通过公司经营、异想体收容与研究、能源生产、部门任务和关键事件推进发展，而不是让殖民者在原版研究台上积累研究点来解锁 LC 科技。
+本 submod 依赖 **LC Anomaly Core（RimWorld 1.7）**，目标是建立一套模仿《脑叶公司》发展历史的独立进程系统。玩家通过公司经营、异想体收容与研究、能源生产、部门任务和关键事件推进发展，而不是让殖民者在原版研究台上积累研究点来解锁 LC 科技。
 
-除非用户明确要求，否则所有实现只面向 RimWorld 1.6，不修改或构建任何 RimWorld 1.5 内容。
+所有实现、构建和发布只面向 RimWorld 1.7 / .NET 10。旧版运行目录与项目已移除；历史代码从 Git 历史查阅。Anomaly DLC 不是依赖项。
 
 ## 2. 核心设计结论
 
@@ -118,7 +118,7 @@ Core 建筑、配方、物品及功能开放
 
 Core 当前已有多个 `ResearchProjectDef`，Core 的建筑、物品、配方、手术和地板通过 `researchPrerequisite` 或 `researchPrerequisites` 引用它们。
 
-为了避免分别 Patch 所有原版消费者，本 submod 可以保留这些 `ResearchProjectDef` 作为“兼容令牌”。当自定义公司发展节点完成时，调用 RimWorld 1.6 的：
+为了避免分别 Patch 所有原版消费者，本 submod 可以保留这些 `ResearchProjectDef` 作为“兼容令牌”。当自定义公司发展节点完成时，调用 RimWorld 1.7 的：
 
 ```csharp
 Find.ResearchManager.FinishProject(project, doCompletionDialog: false, researcher: null, doCompletionLetter: false);
@@ -151,7 +151,7 @@ Find.ResearchManager.FinishProject(project, doCompletionDialog: false, researche
 
 ### 6.3 `FinishProject` 的前置递归风险
 
-RimWorld 1.6 的 `ResearchManager.FinishProject` 会递归完成该项目尚未完成的普通前置项目。
+RimWorld 1.7 的 `ResearchManager.FinishProject` 会递归完成该项目尚未完成的普通前置项目。
 
 因此：
 
@@ -228,7 +228,7 @@ Source/
 
 ## 9. Core 当前可利用的能力
 
-Core 1.6 中已经存在以下可复用数据或扩展点：
+Core 1.7 中已经存在以下可复用数据或扩展点：
 
 - `GameComponent_LC`：可读取 Core 保存的全局及异想体相关状态；
 - `Components.LC`：取得 Core 游戏组件的公共入口；
@@ -238,9 +238,9 @@ Core 1.6 中已经存在以下可复用数据或扩展点：
 - Core 的 `ResearchProjectDef`：作为建筑、配方和物品解锁桥；
 - 部门核心、收容平台、PE-Box、E.G.O 等现有 ThingComp 和 Def。
 
-AI 助手在实际引用某个 Core 类型之前，必须检查其在当前 1.6 程序集中的访问级别和真实行为。不要根据 1.5 代码或旧文档猜测 API。
+AI 助手在实际引用某个 Core 类型之前，必须检查其在当前 1.7 程序集中的访问级别和真实行为。不要根据 1.5 代码或旧文档猜测 API。
 
-涉及 RimWorld 类型、方法、Def 字段或 Harmony Patch 目标时，应使用 Rimsage 验证 RimWorld 1.6 API。
+涉及 RimWorld 类型、方法、Def 字段或 Harmony Patch 目标时，应使用 Rimsage 验证 RimWorld 1.7 API。
 
 ## 10. Mod 依赖与加载顺序
 
@@ -251,7 +251,7 @@ AI 助手在实际引用某个 Core 类型之前，必须检查其在当前 1.6 
 
 加载顺序必须位于 LC Anomaly Core 之后。若通过 XML Patch 接管 Core 的研究项目或添加 `DefModExtension`，应确保 Patch 在 Core Def 加载后执行。
 
-本 submod 的程序集应引用 Core 的 1.6 `LCAnomalyCore.dll`，但不应复制或打包另一份同名 Core DLL。
+本 submod 的程序集应引用 Core 的 1.7 `LCAnomalyCore.dll`，但不应复制或打包另一份同名 Core DLL。
 
 ## 11. 兼容策略
 
@@ -336,15 +336,15 @@ AI 助手在实际引用某个 Core 类型之前，必须检查其在当前 1.6 
 
 AI 助手在参与实现时应遵守以下原则：
 
-1. 先检查当前 submod 和 LC Anomaly Core 1.6 的实际代码，不假设尚不存在的 API。
-2. 只维护 RimWorld 1.6；1.5 文件只读，除非用户当前明确要求修改 1.5。
+1. 先检查当前 submod 和 LC Anomaly Core 1.7 的实际代码，不假设尚不存在的 API。
+2. 只维护 RimWorld 1.7，不恢复旧版本项目或发布内容。
 3. 使用 Rimsage 验证 RimWorld 类型、方法、Def 和 API 兼容性。
 4. 将公司发展状态放在 submod 自己的组件中，不写入实体实例作为唯一状态。
 5. 将原版研究完成状态视为兼容桥，不视为公司发展状态的权威来源。
 6. Harmony Patch 应尽量小且基于明确标记，只影响本 submod 接管的 LC 内容。
 7. 优先数据驱动，避免按 `defName` 写大型硬编码分支。
 8. 修改前评估存档兼容性、第三方 Mod 兼容性和移除 submod 后的行为。
-9. 实现后必须构建并验证 1.6，并检查 RimWorld 启动日志中的 Def 错误和 Harmony Patch 失败。
+9. 实现后必须构建并验证 1.7，并检查 RimWorld 启动日志中的 Def 错误和 Harmony Patch 失败。
 10. 未经用户明确要求，不修改 LC Anomaly Core；优先在 submod 内通过依赖、XML Patch 和兼容层实现。
 
 ## 16. 一句话架构原则

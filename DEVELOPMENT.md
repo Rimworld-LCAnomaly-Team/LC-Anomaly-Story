@@ -2,7 +2,7 @@
 
 ## 当前范围
 
-本项目只维护 RimWorld 1.6。`LC Anomaly Core` 提供异常实体、收容、工作、PE-Box、E.G.O 与研究令牌；本项目维护公司发展、任务状态、统计、解锁桥接和玩家界面。
+本项目只维护 RimWorld 1.7。`LC Anomaly Core` 提供异常实体、收容、工作、PE-Box、E.G.O 与研究令牌；本项目维护公司发展、任务状态、统计、解锁桥接和玩家界面。
 
 首个可玩闭环由三个数据驱动节点组成：
 
@@ -29,20 +29,20 @@
 - UI 只读取组件状态，并通过组件公开方法申请节点完成。
 - Harmony Patch 只采集明确事件或封锁带 `ManagedResearchExtension` 标记的研究项目。
 - 考核 Worker 必须保持无状态；每次尝试的数据写入 `ExaminationRuntime` 基础类型状态槽，复杂对象交给内容包自己的组件保存。
-- `Core16LegacyTypes` 仅为 Core 1.6 遗留的 `ITabDef` 和短类型名提供兼容垫片；不得在其中承载 Story 业务状态。
+- Core 的研究 ITab 和组件使用完整类型名，不再提供旧版 `Core16LegacyTypes` 垫片。
 - 统计增量条件以节点激活时的基准为起点，避免中途加入旧存档时立即完成累计任务。
 - 节点完成、奖励和信件分别保存幂等状态。失败的奖励会在后续低频校验中重试。
 
 ## 目录
 
 ```text
-1.6/
+1.7/
   Assemblies/                         编译输出
   Defs/CompanyDevelopmentDefs/        公司发展节点
   Defs/MainButtonDefs/                主界面入口
   Languages/                          英文与简体中文
   Patches/                            Core Def 标记
-Source/1.6/
+Source/1.7/
   LCAnomalyStory/
     Compatibility/                    Core 研究桥
     Components/                       权威状态与存档
@@ -58,27 +58,25 @@ Tools/                                本地验证脚本
 
 ## 本地构建
 
-复制 `Source/1.6/LocalDllPaths.props.example` 为 `Source/1.6/LocalDllPaths.props`，并设置：
-
-- `RimWorldManagedDir`
-- `HarmonyAssembliesDir`，RimWorld 1.6 应指向 Harmony 的 `Current/Assemblies`
-- `LCAnomalyCoreAssembliesDir`，必须指向 Core 的 `1.6/Assemblies`
+需要 .NET 10 SDK，并将本模组和 Core 放在同一 RimWorld 安装的 `Mods` 目录。项目直接引用游戏根目录程序集和同级 Core 的 1.7 项目，默认使用 Steam 创意工坊 Harmony 的 `1.7/Assemblies`。
 
 运行：
 
 ```powershell
 ./Tools/Validate.ps1
+# 非默认安装可传入游戏根目录和 Harmony 1.7 程序集目录：
+# ./Tools/Validate.ps1 -RimWorldRoot 'E:/Games/RimWorld' -HarmonyAssembliesDir 'E:/Mods/Harmony/1.7/Assemblies'
 ```
 
-脚本会解析全部 XML，并使用 Visual Studio MSBuild 构建 Release。机器私有的 `LocalDllPaths.props` 已被 Git 忽略。
+脚本解析当前 1.7 XML，并使用 `dotnet build` 构建 Release。也可以运行 `Tools/Build.ps1` 只构建项目。
 
-在 Core、Story 和 Harmony 已挂载到 RimWorld 本地 `Mods`，且 `.runtime-test/Config/ModsConfig.xml` 已配置时，可以运行隔离冒烟测试：
+完整 LC 系列和所需第三方框架安装后，可以运行共用的 1.7 隔离测试：
 
 ```powershell
 ./Tools/RuntimeSmokeTest.ps1
 ```
 
-脚本使用独立存档目录和隐藏的图形窗口，检测到 Story 初始化后关闭自己的 RimWorld 测试进程，并检查 Def、交叉引用、翻译、程序集和 Harmony 错误。
+入口转发到 Core 的 `Tools/1.7/RuntimeSmokeTest.ps1`，使用独立配置和隐藏窗口，默认关闭 Anomaly，验证地图、玩法和存档读回。可传入 `-DlcProfile BaseGame` 测试仅基础游戏；不会使用玩家的正常配置和存档。
 
 ## 存档字段
 
