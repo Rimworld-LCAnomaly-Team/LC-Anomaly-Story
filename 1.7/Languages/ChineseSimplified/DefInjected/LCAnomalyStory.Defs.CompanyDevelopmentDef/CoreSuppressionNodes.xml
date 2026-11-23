@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LCStory_Node_SuppressMalkuth.label>控制部核心抑制</LCStory_Node_SuppressMalkuth.label>
+  <LCStory_Node_SuppressMalkuth.description>通过控制部核心抑制考核，为所有部门核心员工永久提供移动速度 +10% 与全局工作速度 +10%。</LCStory_Node_SuppressMalkuth.description>
+  <LCStory_Node_SuppressYesod.label>情报部核心抑制</LCStory_Node_SuppressYesod.label>
+  <LCStory_Node_SuppressYesod.description>通过情报部核心抑制考核，全设施永久获得异想体研究速率 +15% 与额外 PE-Box 产出概率 +25%。</LCStory_Node_SuppressYesod.description>
+  <LCStory_Node_SuppressHod.label>培训部核心抑制</LCStory_Node_SuppressHod.label>
+  <LCStory_Node_SuppressHod.description>通过培训部核心抑制考核，全设施所有部门的四维工作经验获取永久 +50%。</LCStory_Node_SuppressHod.description>
+  <LCStory_Node_SuppressNetzach.label>安保部核心抑制</LCStory_Node_SuppressNetzach.label>
+  <LCStory_Node_SuppressNetzach.description>通过安保部核心抑制考核，所有部门核心永久降低 30% 再生燃料消耗并获得内置精神恢复能力。</LCStory_Node_SuppressNetzach.description>
+  <LCStory_Node_SuppressGebura.label>惩戒部核心抑制</LCStory_Node_SuppressGebura.label>
+  <LCStory_Node_SuppressGebura.description>通过惩戒部核心抑制考核，全设施 E.G.O 最大提取上限永久 +1，主管战术子弹上限 +2。</LCStory_Node_SuppressGebura.description>
+  <LCStory_Node_SuppressBinah.label>研发部核心抑制</LCStory_Node_SuppressBinah.label>
+  <LCStory_Node_SuppressBinah.description>通过研发部核心抑制考核，全设施 E.G.O 提取消耗永久额外降低 20% 且战术子弹充能加速。</LCStory_Node_SuppressBinah.description>
+</LanguageData>

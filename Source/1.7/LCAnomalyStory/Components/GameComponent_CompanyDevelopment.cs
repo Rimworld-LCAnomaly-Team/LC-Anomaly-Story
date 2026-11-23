@@ -108,7 +108,10 @@ namespace LCAnomalyStory.Components
         public const int CurrentDataVersion = 3;
         public const int ExaminationFrameworkApiVersion = CompanyExaminationDef.FrameworkApiVersion;
         public const string StatisticValidWorks = "validWorks";
+        public const string StatisticGoodWorks = "goodWorks";
         public const string StatisticPeBoxProduced = "peBoxProduced";
+        public const string StatisticEgoExtracted = "egoExtracted";
+        public const string StatisticExaminationsPassed = "examinationsPassed";
 
         private int dataVersion = CurrentDataVersion;
         private int nextEvaluationTick;

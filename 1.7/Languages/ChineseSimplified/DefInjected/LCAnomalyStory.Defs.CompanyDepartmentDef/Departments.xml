@@ -7,11 +7,17 @@
   <LCStory_Training.label>培训部</LCStory_Training.label>
   <LCStory_Training.description>员工成长、工作经验与人员生存。</LCStory_Training.description>
   <LCStory_Security.label>安保部</LCStory_Security.label>
-  <LCStory_Security.description>突破收容响应、警报与设施防御。</LCStory_Security.description>
+  <LCStory_Security.description>医疗与精神恢复、突破收容响应与设施防御。</LCStory_Security.description>
+  <LCStory_CentralCommand.label>中央本部</LCStory_CentralCommand.label>
+  <LCStory_CentralCommand.description>双翼中层指挥枢纽，支持扩编员工名额与均衡运作。</LCStory_CentralCommand.description>
   <LCStory_Welfare.label>福利部</LCStory_Welfare.label>
-  <LCStory_Welfare.description>员工恢复、精神稳定与长期健康。</LCStory_Welfare.description>
-  <LCStory_Extraction.label>提取部</LCStory_Extraction.label>
-  <LCStory_Extraction.description>PE-Box、Enkephalin 与 E.G.O 生产。</LCStory_Extraction.description>
-  <LCStory_Architecture.label>架构部</LCStory_Architecture.label>
+  <LCStory_Welfare.description>员工恢复、精神稳定、PE-Box 后勤与长期健康。</LCStory_Welfare.description>
+  <LCStory_Disciplinary.label>惩戒部</LCStory_Disciplinary.label>
+  <LCStory_Disciplinary.description>武力镇压教条、战斗强化与 E.G.O 军械库扩容。</LCStory_Disciplinary.description>
+  <LCStory_Record.label>记录部</LCStory_Record.label>
+  <LCStory_Record.description>制度记忆沉淀、心智稳固与员工档案传承。</LCStory_Record.description>
+  <LCStory_Extraction.label>研发部</LCStory_Extraction.label>
+  <LCStory_Extraction.description>PE-Box、脑啡肽与高效率 E.G.O 提取锻造。</LCStory_Extraction.description>
+  <LCStory_Architecture.label>构筑部</LCStory_Architecture.label>
   <LCStory_Architecture.description>设施级系统整合与公司终局工程。</LCStory_Architecture.description>
 </LanguageData>

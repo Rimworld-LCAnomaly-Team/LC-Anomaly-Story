@@ -24,7 +24,9 @@
   <LCStory_Condition_AnomalyCount>已登记异想体</LCStory_Condition_AnomalyCount>
   <LCStory_Condition_StudyLevel>最高异想体研究等级</LCStory_Condition_StudyLevel>
   <LCStory_Condition_ValidWorks>有效异想体工作次数</LCStory_Condition_ValidWorks>
+  <LCStory_Condition_GoodWorks>“优”评级异想体工作次数</LCStory_Condition_GoodWorks>
   <LCStory_Condition_PEBox>新增 PE-Box</LCStory_Condition_PEBox>
+  <LCStory_Condition_EgoExtracted>已提取 E.G.O 装备数</LCStory_Condition_EgoExtracted>
   <LCStory_Condition_Examination>综合考核</LCStory_Condition_Examination>
   <LCStory_Condition_DepartmentPriority>优先发展部门</LCStory_Condition_DepartmentPriority>
   <LCStory_Condition_AnyNode>可替代发展路线</LCStory_Condition_AnyNode>
@@ -54,6 +56,13 @@
   <LCStory_Reward_Generic>发展奖励</LCStory_Reward_Generic>
   <LCStory_Reward_Research>解锁：{0}</LCStory_Reward_Research>
   <LCStory_Reward_Department>开放部门：{0}</LCStory_Reward_Department>
+  <LCStory_Reward_CoreSuppressionGeneric>永久核心抑制掌握</LCStory_Reward_CoreSuppressionGeneric>
+  <LCStory_Reward_CoreSuppression_Malkuth>核心抑制（控制部）：全员部门员工移动速度与工作速度永久 +10%</LCStory_Reward_CoreSuppression_Malkuth>
+  <LCStory_Reward_CoreSuppression_Yesod>核心抑制（情报部）：全员异想体研究速率 +15% 且额外 PE-Box 概率 +25%</LCStory_Reward_CoreSuppression_Yesod>
+  <LCStory_Reward_CoreSuppression_Hod>核心抑制（培训部）：全设施四维工作经验获取永久 +50%</LCStory_Reward_CoreSuppression_Hod>
+  <LCStory_Reward_CoreSuppression_Netzach>核心抑制（安保部）：所有部门核心燃料消耗 -30% 且获得精神恢复能力</LCStory_Reward_CoreSuppression_Netzach>
+  <LCStory_Reward_CoreSuppression_Gebura>核心抑制（惩戒部）：全设施 E.G.O 提取上限永久 +1 且战术子弹上限 +2</LCStory_Reward_CoreSuppression_Gebura>
+  <LCStory_Reward_CoreSuppression_Binah>核心抑制（研发部）：全设施 E.G.O 消耗永久额外 -20% 且战术子弹充能加速</LCStory_Reward_CoreSuppression_Binah>
   <LCStory_ResearchManagedExternally>{0} 由公司发展系统接管。</LCStory_ResearchManagedExternally>
   <LCStory_NodeCompletedTitle>发展完成：{0}</LCStory_NodeCompletedTitle>
   <LCStory_NodeCompletedText>公司已经完成“{0}”发展节点。</LCStory_NodeCompletedText>

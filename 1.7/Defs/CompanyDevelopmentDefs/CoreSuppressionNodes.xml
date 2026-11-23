@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_Node_SuppressMalkuth</defName>
+    <label>Control Core Suppression</label>
+    <description>Overcome the Control Team Core Suppression to permanently boost Move Speed (+10%) and Global Work Speed (+10%) for all employees assigned to any Department Core.</description>
+    <phase>2</phase>
+    <displayOrder>42</displayOrder>
+    <kind>StageGate</kind>
+    <department>LCStory_Control</department>
+    <prerequisites><li>LCStory_BasicEnergyManagement</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_ExaminationPassed">
+        <labelKey>LCStory_Condition_Examination</labelKey>
+        <examination>LCStory_CoreSuppression_Malkuth</examination>
+      </li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_CoreSuppression">
+        <suppressionId>CoreSuppression_Malkuth</suppressionId>
+        <labelKey>LCStory_Reward_CoreSuppression_Malkuth</labelKey>
+      </li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_Node_SuppressYesod</defName>
+    <label>Information Core Suppression</label>
+    <description>Overcome the Information Team Core Suppression to permanently grant +15% Abnormality Study Rate and +25% bonus PE-Box yield chance facility-wide.</description>
+    <phase>3</phase>
+    <displayOrder>62</displayOrder>
+    <kind>StageGate</kind>
+    <department>LCStory_Information</department>
+    <prerequisites><li>LCStory_InformationPractice</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_ExaminationPassed">
+        <labelKey>LCStory_Condition_Examination</labelKey>
+        <examination>LCStory_CoreSuppression_Yesod</examination>
+      </li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_CoreSuppression">
+        <suppressionId>CoreSuppression_Yesod</suppressionId>
+        <labelKey>LCStory_Reward_CoreSuppression_Yesod</labelKey>
+      </li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_Node_SuppressHod</defName>
+    <label>Training Core Suppression</label>
+    <description>Overcome the Training Team Core Suppression to permanently grant +50% four-attribute work XP gain across all departments.</description>
+    <phase>3</phase>
+    <displayOrder>64</displayOrder>
+    <kind>StageGate</kind>
+    <department>LCStory_Training</department>
+    <prerequisites><li>LCStory_TrainingPractice</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_ExaminationPassed">
+        <labelKey>LCStory_Condition_Examination</labelKey>
+        <examination>LCStory_CoreSuppression_Hod</examination>
+      </li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_CoreSuppression">
+        <suppressionId>CoreSuppression_Hod</suppressionId>
+        <labelKey>LCStory_Reward_CoreSuppression_Hod</labelKey>
+      </li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_Node_SuppressNetzach</defName>
+    <label>Safety Core Suppression</label>
+    <description>Overcome the Safety Team Core Suppression to permanently upgrade all Department Cores with -30% fuel consumption and built-in mental recovery.</description>
+    <phase>4</phase>
+    <displayOrder>82</displayOrder>
+    <kind>StageGate</kind>
+    <department>LCStory_Security</department>
+    <prerequisites><li>LCStory_SecurityExpansion</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_ExaminationPassed">
+        <labelKey>LCStory_Condition_Examination</labelKey>
+        <examination>LCStory_CoreSuppression_Netzach</examination>
+      </li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_CoreSuppression">
+        <suppressionId>CoreSuppression_Netzach</suppressionId>
+        <labelKey>LCStory_Reward_CoreSuppression_Netzach</labelKey>
+      </li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_Node_SuppressGebura</defName>
+    <label>Disciplinary Core Suppression</label>
+    <description>Overcome the Disciplinary Team Core Suppression to permanently grant +1 E.G.O extraction cap facility-wide and +2 max Manager Tactical Bullet charges.</description>
+    <phase>5</phase>
+    <displayOrder>94</displayOrder>
+    <kind>StageGate</kind>
+    <department>LCStory_Disciplinary</department>
+    <prerequisites><li>LCStory_DisciplinaryDoctrine</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_ExaminationPassed">
+        <labelKey>LCStory_Condition_Examination</labelKey>
+        <examination>LCStory_CoreSuppression_Gebura</examination>
+      </li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_CoreSuppression">
+        <suppressionId>CoreSuppression_Gebura</suppressionId>
+        <labelKey>LCStory_Reward_CoreSuppression_Gebura</labelKey>
+      </li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_Node_SuppressBinah</defName>
+    <label>Extraction Core Suppression</label>
+    <description>Overcome the Extraction Team Core Suppression to permanently grant an additional -20% E.G.O PE-Box extraction discount and faster Manager Bullet recharge.</description>
+    <phase>5</phase>
+    <displayOrder>96</displayOrder>
+    <kind>StageGate</kind>
+    <department>LCStory_Extraction</department>
+    <prerequisites><li>LCStory_InstitutionalCrisis</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_ExaminationPassed">
+        <labelKey>LCStory_Condition_Examination</labelKey>
+        <examination>LCStory_CoreSuppression_Binah</examination>
+      </li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_CoreSuppression">
+        <suppressionId>CoreSuppression_Binah</suppressionId>
+        <labelKey>LCStory_Reward_CoreSuppression_Binah</labelKey>
+      </li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+</Defs>

@@ -16,8 +16,14 @@
   <LCStory_OrganizationalIntegration.description>将情报与培训实践整合为稳定的生产组织。</LCStory_OrganizationalIntegration.description>
   <LCStory_SecurityExpansion.label>安保扩张</LCStory_SecurityExpansion.label>
   <LCStory_SecurityExpansion.description>优先发展安保，并在扩大后的运营风险下维持工作。</LCStory_SecurityExpansion.description>
+  <LCStory_CentralCommandEstablishment.label>设立中央本部</LCStory_CentralCommandEstablishment.label>
+  <LCStory_CentralCommandEstablishment.description>优先发展中央本部，在多收容扇区间建立协同的中层调度体系。</LCStory_CentralCommandEstablishment.description>
   <LCStory_WelfareExpansion.label>福利扩张</LCStory_WelfareExpansion.label>
   <LCStory_WelfareExpansion.description>优先发展福利，并证明公司能够长期维持高效生产。</LCStory_WelfareExpansion.description>
+  <LCStory_DisciplinaryDoctrine.label>惩戒教条</LCStory_DisciplinaryDoctrine.label>
+  <LCStory_DisciplinaryDoctrine.description>优先发展惩戒部，锻造 E.G.O 武装并建立高压镇压军械体系。</LCStory_DisciplinaryDoctrine.description>
+  <LCStory_RecordPreservation.label>记录归档</LCStory_RecordPreservation.label>
+  <LCStory_RecordPreservation.description>优先发展记录部，在持续轮班中证明高质量工作的长期稳定性。</LCStory_RecordPreservation.description>
   <LCStory_InstitutionalCrisis.label>制度危机</LCStory_InstitutionalCrisis.label>
   <LCStory_InstitutionalCrisis.description>完成至少一条高级部门路线后，整合高风险运营制度。</LCStory_InstitutionalCrisis.description>
   <LCStory_CorporateEndgame.label>公司终局</LCStory_CorporateEndgame.label>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <!-- Control Team -->
   <LCAnomalyStory.Defs.CompanyDirectiveDef>
     <defName>LCStory_Directive_ControlledWorkCycle</defName>
     <label>Controlled work cycle</label>
@@ -18,6 +19,7 @@
       </li>
     </objectives>
   </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
   <LCAnomalyStory.Defs.CompanyDirectiveDef>
     <defName>LCStory_Directive_PEBoxQuota</defName>
     <label>PE-Box quota</label>
@@ -33,6 +35,230 @@
         <labelKey>LCStory_Condition_PEBox</labelKey>
         <statistic>peBoxProduced</statistic>
         <target>12</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Information Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_InformationPrecision</defName>
+    <label>Precision telemetry audit</label>
+    <description>Achieve three Good-grade abnormality work results to validate Information Team observation records.</description>
+    <minimumPhase>2</minimumPhase>
+    <department>LCStory_Information</department>
+    <durationTicks>60000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>2</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_GoodWorks</labelKey>
+        <statistic>goodWorks</statistic>
+        <target>3</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_InformationTelemetryQuota</defName>
+    <label>Telemetry sample quota</label>
+    <description>Collect twenty PE-Box under Information Team observation protocols.</description>
+    <minimumPhase>2</minimumPhase>
+    <department>LCStory_Information</department>
+    <durationTicks>60000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>2</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>20</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Training Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_TrainingFieldDrills</defName>
+    <label>Field containment drills</label>
+    <description>Complete five valid abnormality work sessions to keep Training Team recruits sharp.</description>
+    <minimumPhase>2</minimumPhase>
+    <department>LCStory_Training</department>
+    <durationTicks>60000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>2</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>5</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Safety Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_SafetyZeroIncidentShift</defName>
+    <label>Zero-incident safety shift</label>
+    <description>Complete four Good-grade abnormality work sessions without compromising facility safety standards.</description>
+    <minimumPhase>3</minimumPhase>
+    <department>LCStory_Security</department>
+    <durationTicks>60000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>2</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_GoodWorks</labelKey>
+        <statistic>goodWorks</statistic>
+        <target>4</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Central Command Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_CentralCommandCoordination</defName>
+    <label>Twin-wing work coordination</label>
+    <description>Demonstrate Central Command throughput by completing eight valid work sessions and producing thirty-five PE-Box.</description>
+    <minimumPhase>3</minimumPhase>
+    <department>LCStory_CentralCommand</department>
+    <durationTicks>75000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>3</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>8</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>35</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Welfare Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_WelfareSustainedOutput</defName>
+    <label>Sustained welfare output</label>
+    <description>Produce forty PE-Box while keeping employee morale and stability intact.</description>
+    <minimumPhase>3</minimumPhase>
+    <department>LCStory_Welfare</department>
+    <durationTicks>75000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>2</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>40</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Disciplinary Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_DisciplinaryArmoryOrder</defName>
+    <label>Disciplinary armory requisition</label>
+    <description>Extract at least one E.G.O weapon or suit to expand the Disciplinary Team suppression arsenal.</description>
+    <minimumPhase>4</minimumPhase>
+    <department>LCStory_Disciplinary</department>
+    <durationTicks>90000</durationTicks>
+    <cooldownTicks>45000</cooldownTicks>
+    <selectionWeight>0.85</selectionWeight>
+    <departmentExperience>3</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_EgoExtracted</labelKey>
+        <statistic>egoExtracted</statistic>
+        <target>1</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Record Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_RecordArchivalBenchmark</defName>
+    <label>Archival quality benchmark</label>
+    <description>Log five Good-grade work sessions and thirty PE-Box for Record Team institutional archives.</description>
+    <minimumPhase>4</minimumPhase>
+    <department>LCStory_Record</department>
+    <durationTicks>75000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>3</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_GoodWorks</labelKey>
+        <statistic>goodWorks</statistic>
+        <target>5</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>30</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Extraction Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_ExtractionEgoForging</defName>
+    <label>Deep-layer E.G.O forging</label>
+    <description>Produce thirty PE-Box and extract one piece of E.G.O gear under Extraction Team oversight.</description>
+    <minimumPhase>4</minimumPhase>
+    <department>LCStory_Extraction</department>
+    <durationTicks>90000</durationTicks>
+    <cooldownTicks>45000</cooldownTicks>
+    <selectionWeight>0.85</selectionWeight>
+    <departmentExperience>3</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>30</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_EgoExtracted</labelKey>
+        <statistic>egoExtracted</statistic>
+        <target>1</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <!-- Architecture Team -->
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_ArchitectureFacilitySynthesis</defName>
+    <label>Facility synthesis quota</label>
+    <description>Prove terminal corporate readiness by completing ten valid works, five Good-grade works, and sixty PE-Box.</description>
+    <minimumPhase>5</minimumPhase>
+    <department>LCStory_Architecture</department>
+    <durationTicks>90000</durationTicks>
+    <cooldownTicks>45000</cooldownTicks>
+    <selectionWeight>1</selectionWeight>
+    <departmentExperience>4</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>10</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_GoodWorks</labelKey>
+        <statistic>goodWorks</statistic>
+        <target>5</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>60</target>
       </li>
     </objectives>
   </LCAnomalyStory.Defs.CompanyDirectiveDef>

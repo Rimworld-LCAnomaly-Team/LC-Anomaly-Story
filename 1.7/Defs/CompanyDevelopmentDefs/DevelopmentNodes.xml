@@ -156,8 +156,8 @@
 
   <LCAnomalyStory.Defs.CompanyDevelopmentDef>
     <defName>LCStory_SecurityExpansion</defName>
-    <label>Security expansion</label>
-    <description>Prioritize security and demonstrate sustained work under expanded operating risk.</description>
+    <label>Safety expansion</label>
+    <description>Prioritize the Safety Team and demonstrate sustained work under expanded operating risk.</description>
     <phase>3</phase>
     <displayOrder>70</displayOrder>
     <kind>DepartmentTask</kind>
@@ -171,6 +171,25 @@
     <rewards>
       <li Class="LCAnomalyStory.Rewards.DevelopmentReward_OpenDepartment"><department>LCStory_Security</department></li>
       <li Class="LCAnomalyStory.Rewards.DevelopmentReward_FinishResearch"><project>Enkephalin_ElectricGeneratorAdvanced</project></li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_CentralCommandEstablishment</defName>
+    <label>Central Command establishment</label>
+    <description>Prioritize Central Command and establish coordinated mid-layer management across multiple containment sectors.</description>
+    <phase>3</phase>
+    <displayOrder>75</displayOrder>
+    <kind>DepartmentTask</kind>
+    <department>LCStory_CentralCommand</department>
+    <prerequisites><li>LCStory_OrganizationalIntegration</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_DepartmentPrioritized"><department>LCStory_CentralCommand</department></li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_StatisticAtLeast"><labelKey>LCStory_Condition_ValidWorks</labelKey><statistic>validWorks</statistic><target>18</target><sinceNodeActivation>true</sinceNodeActivation></li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_StatisticAtLeast"><labelKey>LCStory_Condition_PEBox</labelKey><statistic>peBoxProduced</statistic><target>80</target><sinceNodeActivation>true</sinceNodeActivation></li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_OpenDepartment"><department>LCStory_CentralCommand</department></li>
     </rewards>
   </LCAnomalyStory.Defs.CompanyDevelopmentDef>
 
@@ -195,6 +214,50 @@
   </LCAnomalyStory.Defs.CompanyDevelopmentDef>
 
   <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_DisciplinaryDoctrine</defName>
+    <label>Disciplinary doctrine</label>
+    <description>Prioritize the Disciplinary Team, forge E.G.O armaments, and establish an aggressive suppression armory.</description>
+    <phase>4</phase>
+    <displayOrder>85</displayOrder>
+    <kind>DepartmentTask</kind>
+    <department>LCStory_Disciplinary</department>
+    <prerequisites><li>LCStory_OrganizationalIntegration</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_DepartmentPrioritized"><department>LCStory_Disciplinary</department></li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_AnyNodeCompleted">
+        <nodes><li>LCStory_SecurityExpansion</li><li>LCStory_CentralCommandEstablishment</li><li>LCStory_WelfareExpansion</li></nodes>
+      </li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_StatisticAtLeast"><labelKey>LCStory_Condition_EgoExtracted</labelKey><statistic>egoExtracted</statistic><target>1</target><sinceNodeActivation>true</sinceNodeActivation></li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_StatisticAtLeast"><labelKey>LCStory_Condition_ValidWorks</labelKey><statistic>validWorks</statistic><target>20</target><sinceNodeActivation>true</sinceNodeActivation></li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_OpenDepartment"><department>LCStory_Disciplinary</department></li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
+    <defName>LCStory_RecordPreservation</defName>
+    <label>Record preservation</label>
+    <description>Prioritize the Record Team and prove consistent high-quality operations across repeated work cycles.</description>
+    <phase>4</phase>
+    <displayOrder>88</displayOrder>
+    <kind>DepartmentTask</kind>
+    <department>LCStory_Record</department>
+    <prerequisites><li>LCStory_OrganizationalIntegration</li></prerequisites>
+    <conditions>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_DepartmentPrioritized"><department>LCStory_Record</department></li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_AnyNodeCompleted">
+        <nodes><li>LCStory_SecurityExpansion</li><li>LCStory_CentralCommandEstablishment</li><li>LCStory_WelfareExpansion</li></nodes>
+      </li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_StatisticAtLeast"><labelKey>LCStory_Condition_GoodWorks</labelKey><statistic>goodWorks</statistic><target>10</target><sinceNodeActivation>true</sinceNodeActivation></li>
+      <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_StatisticAtLeast"><statistic>directivesCompleted</statistic><target>3</target><sinceNodeActivation>true</sinceNodeActivation></li>
+    </conditions>
+    <rewards>
+      <li Class="LCAnomalyStory.Rewards.DevelopmentReward_OpenDepartment"><department>LCStory_Record</department></li>
+    </rewards>
+  </LCAnomalyStory.Defs.CompanyDevelopmentDef>
+
+  <LCAnomalyStory.Defs.CompanyDevelopmentDef>
     <defName>LCStory_InstitutionalCrisis</defName>
     <label>Institutional crisis</label>
     <description>Consolidate a high-risk operating doctrine after completing at least one advanced department route.</description>
@@ -205,7 +268,7 @@
     <prerequisites><li>LCStory_OrganizationalIntegration</li></prerequisites>
     <conditions>
       <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_AnyNodeCompleted">
-        <nodes><li>LCStory_SecurityExpansion</li><li>LCStory_WelfareExpansion</li></nodes>
+        <nodes><li>LCStory_SecurityExpansion</li><li>LCStory_CentralCommandEstablishment</li><li>LCStory_WelfareExpansion</li></nodes>
       </li>
       <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_StatisticAtLeast"><statistic>directivesCompleted</statistic><target>5</target><sinceNodeActivation>true</sinceNodeActivation></li>
     </conditions>

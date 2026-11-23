@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LCStory_CoreSuppression_Malkuth.label>控制部核心抑制 — 挺直腰板的意志</LCStory_CoreSuppression_Malkuth.label>
+  <LCStory_CoreSuppression_Malkuth.description>控制部指令系统在高压下发生错乱（工作成功率 -15% 并伴随周期性精神压力脉冲）。在抑制期限结束前完成八次有效异想体工作并生产三十五点 PE-Box。</LCStory_CoreSuppression_Malkuth.description>
+  <LCStory_CoreSuppression_Yesod.label>情报部核心抑制 — 保持理智的克制</LCStory_CoreSuppression_Yesod.label>
+  <LCStory_CoreSuppression_Yesod.description>情报遥测系统陷入失真与噪声（工作成功率 -12% 并伴随精神干扰脉冲）。取得六次“优”评级工作与四十点 PE-Box 以稳定情报部核心。</LCStory_CoreSuppression_Yesod.description>
+  <LCStory_CoreSuppression_Hod.label>培训部核心抑制 — 想要成为好人的希望</LCStory_CoreSuppression_Hod.label>
+  <LCStory_CoreSuppression_Hod.description>考核期间全设施殖民者受到培训压制减益（移动速度与全局工作速度 -25%）。在虚弱状态下完成十次有效异想体工作。</LCStory_CoreSuppression_Hod.description>
+  <LCStory_CoreSuppression_Netzach.label>安保部核心抑制 — 活下去的勇气</LCStory_CoreSuppression_Netzach.label>
+  <LCStory_CoreSuppression_Netzach.description>考核期间所有部门核心房间再生器将被强制封锁。在无法依赖核心自动治疗的情况下完成八次有效工作并生产五十点 PE-Box。</LCStory_CoreSuppression_Netzach.description>
+  <LCStory_CoreSuppression_Gebura.label>惩戒部核心抑制 — 守护他人的勇气</LCStory_CoreSuppression_Gebura.label>
+  <LCStory_CoreSuppression_Gebura.description>高强度军械镇压压力测试（工作成功率 -18% 并伴随更强的精神压力脉冲）。完成十二次有效工作并提取一件 E.G.O 装备以掌控惩戒教条。</LCStory_CoreSuppression_Gebura.description>
+  <LCStory_CoreSuppression_Binah.label>研发部核心抑制 — 调律者</LCStory_CoreSuppression_Binah.label>
+  <LCStory_CoreSuppression_Binah.description>深层 Cogito 反噬（工作成功率 -20% 并伴随持续精神侵蚀）。完成十二次有效工作并生产八十点 PE-Box 以掌握深层提取锻造。</LCStory_CoreSuppression_Binah.description>
+</LanguageData>

@@ -6,7 +6,7 @@
   <supportedVersions>
     <li>1.7</li>
   </supportedVersions>
-  <description>Adds a data-driven company development and mission progression system for LC Anomaly Core.</description>
+  <description>[Early WIP / 极早期不完善版本] Adds a data-driven company development, 10-department progression, directive, and Core Suppression examination system for LC Anomaly Core. Balance and progression pacing are still under active iteration.</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 1. Control Team Core Suppression (Malkuth) -->
+  <LCAnomalyStory.Defs.CompanyExaminationDef>
+    <defName>LCStory_CoreSuppression_Malkuth</defName>
+    <label>Control Core Suppression — The Will to Stand Up Straight</label>
+    <description>Control Team protocols scramble under severe cognitive pressure (-15% work success rate and periodic stress pulses). Complete eight valid abnormality works and produce thirty-five PE-Box before the suppression window ends.</description>
+    <durationTicks>75000</durationTicks>
+    <retryCooldownTicks>45000</retryCooldownTicks>
+    <workerTickInterval>60</workerTickInterval>
+    <effects>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_WorkSuccessPenalty">
+        <amount>0.15</amount>
+      </li>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_MentalStressPulse">
+        <intervalTicks>4000</intervalTicks>
+        <severity>0.04</severity>
+      </li>
+    </effects>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>8</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>35</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyExaminationDef>
+
+  <!-- 2. Information Team Core Suppression (Yesod) -->
+  <LCAnomalyStory.Defs.CompanyExaminationDef>
+    <defName>LCStory_CoreSuppression_Yesod</defName>
+    <label>Information Core Suppression — The Rationality to Maintain Discretion</label>
+    <description>Information telemetry degrades into distortion (-12% work success rate and periodic mental noise). Achieve six Good-grade works and forty PE-Box to stabilize the Information Core.</description>
+    <durationTicks>75000</durationTicks>
+    <retryCooldownTicks>45000</retryCooldownTicks>
+    <workerTickInterval>60</workerTickInterval>
+    <effects>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_WorkSuccessPenalty">
+        <amount>0.12</amount>
+      </li>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_MentalStressPulse">
+        <intervalTicks>3600</intervalTicks>
+        <severity>0.04</severity>
+      </li>
+    </effects>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_GoodWorks</labelKey>
+        <statistic>goodWorks</statistic>
+        <target>6</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>40</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyExaminationDef>
+
+  <!-- 3. Training Team Core Suppression (Hod) -->
+  <LCAnomalyStory.Defs.CompanyExaminationDef>
+    <defName>LCStory_CoreSuppression_Hod</defName>
+    <label>Training Core Suppression — The Hope to Be a Better Person</label>
+    <description>Employee conditioning collapses during the examination (-25% Move Speed and Global Work Speed across all colonists). Complete ten valid abnormality works while weakened.</description>
+    <durationTicks>90000</durationTicks>
+    <retryCooldownTicks>45000</retryCooldownTicks>
+    <workerTickInterval>60</workerTickInterval>
+    <effects>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_ColonistHediff">
+        <hediff>LC_CoreSuppression_HodDebuff</hediff>
+      </li>
+    </effects>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>10</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyExaminationDef>
+
+  <!-- 4. Safety Team Core Suppression (Netzach) -->
+  <LCAnomalyStory.Defs.CompanyExaminationDef>
+    <defName>LCStory_CoreSuppression_Netzach</defName>
+    <label>Safety Core Suppression — The Fearlessness to Keep on Living</label>
+    <description>All Department Core room regenerators are locked offline for the duration of this examination. Complete eight valid works and produce fifty PE-Box without room regeneration.</description>
+    <durationTicks>90000</durationTicks>
+    <retryCooldownTicks>45000</retryCooldownTicks>
+    <workerTickInterval>60</workerTickInterval>
+    <effects>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_HealLockout" />
+    </effects>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>8</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>50</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyExaminationDef>
+
+  <!-- 5. Disciplinary Team Core Suppression (Gebura) -->
+  <LCAnomalyStory.Defs.CompanyExaminationDef>
+    <defName>LCStory_CoreSuppression_Gebura</defName>
+    <label>Disciplinary Core Suppression — The Courage to Protect</label>
+    <description>High-intensity armory stress test (-18% work success rate and heavier mental stress pulses). Complete twelve valid works and extract one E.G.O gear piece to master Disciplinary doctrine.</description>
+    <durationTicks>105000</durationTicks>
+    <retryCooldownTicks>60000</retryCooldownTicks>
+    <workerTickInterval>60</workerTickInterval>
+    <effects>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_WorkSuccessPenalty">
+        <amount>0.18</amount>
+      </li>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_MentalStressPulse">
+        <intervalTicks>3200</intervalTicks>
+        <severity>0.05</severity>
+      </li>
+    </effects>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>12</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_EgoExtracted</labelKey>
+        <statistic>egoExtracted</statistic>
+        <target>1</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyExaminationDef>
+
+  <!-- 6. Extraction Team Core Suppression (Binah) -->
+  <LCAnomalyStory.Defs.CompanyExaminationDef>
+    <defName>LCStory_CoreSuppression_Binah</defName>
+    <label>Extraction Core Suppression — An Arbiter</label>
+    <description>Deep-layer Cogito backlash (-20% work success rate and sustained mental erosion). Complete twelve valid works and produce eighty PE-Box to master Extraction forging.</description>
+    <durationTicks>105000</durationTicks>
+    <retryCooldownTicks>60000</retryCooldownTicks>
+    <workerTickInterval>60</workerTickInterval>
+    <effects>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_WorkSuccessPenalty">
+        <amount>0.20</amount>
+      </li>
+      <li Class="LCAnomalyStory.Examinations.ExaminationEffect_MentalStressPulse">
+        <intervalTicks>3000</intervalTicks>
+        <severity>0.06</severity>
+      </li>
+    </effects>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>12</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.ExaminationObjective_Statistic">
+        <labelKey>LCStory_Condition_PEBox</labelKey>
+        <statistic>peBoxProduced</statistic>
+        <target>80</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyExaminationDef>
+</Defs>

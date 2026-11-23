@@ -24,7 +24,9 @@
   <LCStory_Condition_AnomalyCount>Registered abnormalities</LCStory_Condition_AnomalyCount>
   <LCStory_Condition_StudyLevel>Highest abnormality research level</LCStory_Condition_StudyLevel>
   <LCStory_Condition_ValidWorks>Valid abnormality work sessions</LCStory_Condition_ValidWorks>
+  <LCStory_Condition_GoodWorks>Good-grade abnormality works</LCStory_Condition_GoodWorks>
   <LCStory_Condition_PEBox>PE-Box produced</LCStory_Condition_PEBox>
+  <LCStory_Condition_EgoExtracted>E.G.O gear extracted</LCStory_Condition_EgoExtracted>
   <LCStory_Condition_Examination>Comprehensive assessment</LCStory_Condition_Examination>
   <LCStory_Condition_DepartmentPriority>Prioritized department</LCStory_Condition_DepartmentPriority>
   <LCStory_Condition_AnyNode>Alternative development route</LCStory_Condition_AnyNode>
@@ -54,6 +56,13 @@
   <LCStory_Reward_Generic>Development reward</LCStory_Reward_Generic>
   <LCStory_Reward_Research>Unlock: {0}</LCStory_Reward_Research>
   <LCStory_Reward_Department>Open department: {0}</LCStory_Reward_Department>
+  <LCStory_Reward_CoreSuppressionGeneric>Permanent Core Suppression mastery</LCStory_Reward_CoreSuppressionGeneric>
+  <LCStory_Reward_CoreSuppression_Malkuth>Core Mastery (Control): All assigned employees +10% Move &amp; Work Speed</LCStory_Reward_CoreSuppression_Malkuth>
+  <LCStory_Reward_CoreSuppression_Yesod>Core Mastery (Information): +15% Study Rate &amp; +25% bonus PE-Box chance</LCStory_Reward_CoreSuppression_Yesod>
+  <LCStory_Reward_CoreSuppression_Hod>Core Mastery (Training): All departments +50% four-attribute work XP gain</LCStory_Reward_CoreSuppression_Hod>
+  <LCStory_Reward_CoreSuppression_Netzach>Core Mastery (Safety): All Department Cores -30% fuel &amp; built-in SP heal</LCStory_Reward_CoreSuppression_Netzach>
+  <LCStory_Reward_CoreSuppression_Gebura>Core Mastery (Disciplinary): Facility E.G.O cap +1 &amp; Manager Bullets +2</LCStory_Reward_CoreSuppression_Gebura>
+  <LCStory_Reward_CoreSuppression_Binah>Core Mastery (Extraction): Facility E.G.O PE-Box cost -20% &amp; faster bullet recharge</LCStory_Reward_CoreSuppression_Binah>
   <LCStory_ResearchManagedExternally>{0} is managed through company development.</LCStory_ResearchManagedExternally>
   <LCStory_NodeCompletedTitle>Development completed: {0}</LCStory_NodeCompletedTitle>
   <LCStory_NodeCompletedText>The company has completed the {0} development node.</LCStory_NodeCompletedText>

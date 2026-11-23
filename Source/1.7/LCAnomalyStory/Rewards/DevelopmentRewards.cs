@@ -76,4 +76,36 @@ namespace LCAnomalyStory.Rewards
             }
         }
     }
+
+    public class DevelopmentReward_CoreSuppression : DevelopmentReward
+    {
+        public string suppressionId;
+
+        public override bool TryApply(GameComponent_CompanyDevelopment component, CompanyDevelopmentDef node)
+        {
+            if (suppressionId.NullOrEmpty())
+            {
+                return false;
+            }
+            return LCAnomalyCore.GameComponent.GameComponent_LC.Instance?.CompleteCoreSuppression(suppressionId) ?? false;
+        }
+
+        public override string Description
+        {
+            get
+            {
+                return labelKey.NullOrEmpty()
+                    ? "LCStory_Reward_CoreSuppressionGeneric".Translate()
+                    : labelKey.Translate();
+            }
+        }
+
+        public override IEnumerable<string> ConfigErrors()
+        {
+            if (suppressionId.NullOrEmpty())
+            {
+                yield return "suppressionId is required";
+            }
+        }
+    }
 }

@@ -4,4 +4,24 @@
   <LCStory_Directive_ControlledWorkCycle.description>在指令结束前完成三次有效异想体工作。</LCStory_Directive_ControlledWorkCycle.description>
   <LCStory_Directive_PEBoxQuota.label>PE-Box 配额</LCStory_Directive_PEBoxQuota.label>
   <LCStory_Directive_PEBoxQuota.description>在指令结束前生产十二点 PE-Box。</LCStory_Directive_PEBoxQuota.description>
+  <LCStory_Directive_InformationPrecision.label>精密观测审计</LCStory_Directive_InformationPrecision.label>
+  <LCStory_Directive_InformationPrecision.description>取得三次“优”评级的异想体工作结果，以校验情报部观测记录。</LCStory_Directive_InformationPrecision.description>
+  <LCStory_Directive_InformationTelemetryQuota.label>遥测样本配额</LCStory_Directive_InformationTelemetryQuota.label>
+  <LCStory_Directive_InformationTelemetryQuota.description>在情报部观测协议下收集二十点 PE-Box。</LCStory_Directive_InformationTelemetryQuota.description>
+  <LCStory_Directive_TrainingFieldDrills.label>收容实操演练</LCStory_Directive_TrainingFieldDrills.label>
+  <LCStory_Directive_TrainingFieldDrills.description>完成五次有效异想体工作，保持培训部新晋员工的实战手感。</LCStory_Directive_TrainingFieldDrills.description>
+  <LCStory_Directive_SafetyZeroIncidentShift.label>零事故安全轮班</LCStory_Directive_SafetyZeroIncidentShift.label>
+  <LCStory_Directive_SafetyZeroIncidentShift.description>在安保部规范下完成四次“优”评级的异想体工作。</LCStory_Directive_SafetyZeroIncidentShift.description>
+  <LCStory_Directive_CentralCommandCoordination.label>双翼协同调度</LCStory_Directive_CentralCommandCoordination.label>
+  <LCStory_Directive_CentralCommandCoordination.description>完成八次有效工作并生产三十五点 PE-Box，以检验中央本部调度吞吐量。</LCStory_Directive_CentralCommandCoordination.description>
+  <LCStory_Directive_WelfareSustainedOutput.label>稳态福利产出</LCStory_Directive_WelfareSustainedOutput.label>
+  <LCStory_Directive_WelfareSustainedOutput.description>在维系员工士气与心智稳定的前提下生产四十点 PE-Box。</LCStory_Directive_WelfareSustainedOutput.description>
+  <LCStory_Directive_DisciplinaryArmoryOrder.label>惩戒军械征调</LCStory_Directive_DisciplinaryArmoryOrder.label>
+  <LCStory_Directive_DisciplinaryArmoryOrder.description>提取至少一件 E.G.O 武器或护甲，扩充惩戒部镇压武库。</LCStory_Directive_DisciplinaryArmoryOrder.description>
+  <LCStory_Directive_RecordArchivalBenchmark.label>档案质量基准</LCStory_Directive_RecordArchivalBenchmark.label>
+  <LCStory_Directive_RecordArchivalBenchmark.description>为记录部机构档案录得五次“优”评级工作与三十点 PE-Box。</LCStory_Directive_RecordArchivalBenchmark.description>
+  <LCStory_Directive_ExtractionEgoForging.label>深层 E.G.O 锻造</LCStory_Directive_ExtractionEgoForging.label>
+  <LCStory_Directive_ExtractionEgoForging.description>在研发部监督下生产三十点 PE-Box 并提取一件 E.G.O 装备。</LCStory_Directive_ExtractionEgoForging.description>
+  <LCStory_Directive_ArchitectureFacilitySynthesis.label>设施综合配额</LCStory_Directive_ArchitectureFacilitySynthesis.label>
+  <LCStory_Directive_ArchitectureFacilitySynthesis.description>完成十次有效工作、五次“优”评级工作并生产六十点 PE-Box，验证终局设施就绪度。</LCStory_Directive_ArchitectureFacilitySynthesis.description>
 </LanguageData>

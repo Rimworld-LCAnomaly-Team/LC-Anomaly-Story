@@ -14,6 +14,7 @@
     <description>Abnormality research, intelligence collection, and risk forecasting.</description>
     <displayOrder>20</displayOrder>
     <minimumPhase>2</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_InformationTeam</coreThingDef>
   </LCAnomalyStory.Defs.CompanyDepartmentDef>
   <LCAnomalyStory.Defs.CompanyDepartmentDef>
     <defName>LCStory_Training</defName>
@@ -21,27 +22,55 @@
     <description>Employee growth, experience, and survival capability.</description>
     <displayOrder>30</displayOrder>
     <minimumPhase>2</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_TrainingTeam</coreThingDef>
   </LCAnomalyStory.Defs.CompanyDepartmentDef>
   <LCAnomalyStory.Defs.CompanyDepartmentDef>
     <defName>LCStory_Security</defName>
-    <label>Security</label>
-    <description>Containment breach response, alarms, and facility defense.</description>
+    <label>Safety</label>
+    <description>Medical regeneration, mental care, containment breach response, and facility defense.</description>
     <displayOrder>40</displayOrder>
     <minimumPhase>3</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_SafetyTeam</coreThingDef>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_CentralCommand</defName>
+    <label>Central Command</label>
+    <description>Twin-wing facility coordination supporting expanded employee rosters and balanced operations.</description>
+    <displayOrder>45</displayOrder>
+    <minimumPhase>3</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_CentralCommandTeam</coreThingDef>
   </LCAnomalyStory.Defs.CompanyDepartmentDef>
   <LCAnomalyStory.Defs.CompanyDepartmentDef>
     <defName>LCStory_Welfare</defName>
     <label>Welfare</label>
-    <description>Employee recovery, mental stability, and long-term health.</description>
+    <description>Employee recovery, mental stability, PE-Box logistics, and long-term health.</description>
     <displayOrder>50</displayOrder>
     <minimumPhase>3</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_WelfareTeam</coreThingDef>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Disciplinary</defName>
+    <label>Disciplinary</label>
+    <description>Direct suppression doctrine, combat training, and expanded E.G.O armory capacity.</description>
+    <displayOrder>55</displayOrder>
+    <minimumPhase>4</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_DisciplinaryTeam</coreThingDef>
+  </LCAnomalyStory.Defs.CompanyDepartmentDef>
+  <LCAnomalyStory.Defs.CompanyDepartmentDef>
+    <defName>LCStory_Record</defName>
+    <label>Record</label>
+    <description>Institutional memory, mental fortitude, and archival employee preservation.</description>
+    <displayOrder>58</displayOrder>
+    <minimumPhase>4</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_RecordTeam</coreThingDef>
   </LCAnomalyStory.Defs.CompanyDepartmentDef>
   <LCAnomalyStory.Defs.CompanyDepartmentDef>
     <defName>LCStory_Extraction</defName>
     <label>Extraction</label>
-    <description>PE-Box, Enkephalin, and E.G.O production.</description>
+    <description>PE-Box, Enkephalin, and high-efficiency E.G.O production.</description>
     <displayOrder>60</displayOrder>
     <minimumPhase>4</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_ExtractionTeam</coreThingDef>
   </LCAnomalyStory.Defs.CompanyDepartmentDef>
   <LCAnomalyStory.Defs.CompanyDepartmentDef>
     <defName>LCStory_Architecture</defName>
@@ -49,5 +78,6 @@
     <description>Facility-wide integration and terminal company projects.</description>
     <displayOrder>70</displayOrder>
     <minimumPhase>5</minimumPhase>
+    <coreThingDef>LC_DepartmentCore_ArchitectureTeam</coreThingDef>
   </LCAnomalyStory.Defs.CompanyDepartmentDef>
 </Defs>
