@@ -17,7 +17,7 @@
   <LCAnomalyStory.Defs.CompanyDevelopmentDef>
     <defName>LCStory_Foundation</defName>
     <label>Establish containment operations</label>
-    <description>Build a functioning containment platform and register the company's first abnormality.</description>
+    <description>Build a functioning containment room terminal and register the company's first abnormality.</description>
     <phase>1</phase>
     <displayOrder>10</displayOrder>
     <kind>Milestone</kind>
@@ -27,7 +27,7 @@
     <conditions>
       <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_ThingCountAtLeast">
         <labelKey>LCStory_Condition_HoldingPlatform</labelKey>
-        <thingDef>LC_HoldingPlatform</thingDef>
+        <thingDef>LC_ContainmentTerminal</thingDef>
         <count>1</count>
       </li>
       <li Class="LCAnomalyStory.Conditions.DevelopmentCondition_CoreAnomalyCountAtLeast">

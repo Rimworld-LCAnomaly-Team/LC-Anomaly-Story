@@ -20,7 +20,7 @@
   <LCStory_NodeCompletesAutomatically>满足全部条件后，该节点将自动完成。</LCStory_NodeCompletesAutomatically>
   <LCStory_Condition_Statistic>统计进度</LCStory_Condition_Statistic>
   <LCStory_Condition_ThingCount>已建设设施</LCStory_Condition_ThingCount>
-  <LCStory_Condition_HoldingPlatform>收容平台</LCStory_Condition_HoldingPlatform>
+  <LCStory_Condition_HoldingPlatform>收容室控制终端</LCStory_Condition_HoldingPlatform>
   <LCStory_Condition_AnomalyCount>已登记异想体</LCStory_Condition_AnomalyCount>
   <LCStory_Condition_StudyLevel>最高异想体研究等级</LCStory_Condition_StudyLevel>
   <LCStory_Condition_ValidWorks>有效异想体工作次数</LCStory_Condition_ValidWorks>

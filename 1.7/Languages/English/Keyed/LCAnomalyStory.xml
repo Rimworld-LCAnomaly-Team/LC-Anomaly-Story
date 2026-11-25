@@ -20,7 +20,7 @@
   <LCStory_NodeCompletesAutomatically>This node completes automatically when all conditions are met.</LCStory_NodeCompletesAutomatically>
   <LCStory_Condition_Statistic>Recorded progress</LCStory_Condition_Statistic>
   <LCStory_Condition_ThingCount>Constructed facilities</LCStory_Condition_ThingCount>
-  <LCStory_Condition_HoldingPlatform>Containment platforms</LCStory_Condition_HoldingPlatform>
+  <LCStory_Condition_HoldingPlatform>Containment room terminals</LCStory_Condition_HoldingPlatform>
   <LCStory_Condition_AnomalyCount>Registered abnormalities</LCStory_Condition_AnomalyCount>
   <LCStory_Condition_StudyLevel>Highest abnormality research level</LCStory_Condition_StudyLevel>
   <LCStory_Condition_ValidWorks>Valid abnormality work sessions</LCStory_Condition_ValidWorks>

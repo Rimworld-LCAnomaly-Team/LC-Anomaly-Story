@@ -3,7 +3,7 @@
   <LCStory_CompanyCharter.label>公司经营许可</LCStory_CompanyCharter.label>
   <LCStory_CompanyCharter.description>建立异想体提取、收容与 Cogito 处理所需的最低经营权限。</LCStory_CompanyCharter.description>
   <LCStory_Foundation.label>建立收容业务</LCStory_Foundation.label>
-  <LCStory_Foundation.description>建成可用的收容平台，并登记公司的第一个异想体。</LCStory_Foundation.description>
+  <LCStory_Foundation.description>建成可用的收容室控制终端，并登记公司的第一个异想体。</LCStory_Foundation.description>
   <LCStory_OperationalPractice.label>形成运营经验</LCStory_OperationalPractice.label>
   <LCStory_OperationalPractice.description>重复完成异想体工作，积累 PE-Box，并建立基础研究认知。</LCStory_OperationalPractice.description>
   <LCStory_BasicEnergyManagement.label>批准基础能源管理</LCStory_BasicEnergyManagement.label>
