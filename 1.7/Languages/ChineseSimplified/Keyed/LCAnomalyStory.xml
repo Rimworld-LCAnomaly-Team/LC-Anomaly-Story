@@ -27,6 +27,7 @@
   <LCStory_Condition_GoodWorks>“优”评级异想体工作次数</LCStory_Condition_GoodWorks>
   <LCStory_Condition_PEBox>新增 PE-Box</LCStory_Condition_PEBox>
   <LCStory_Condition_EgoExtracted>已提取 E.G.O 装备数</LCStory_Condition_EgoExtracted>
+  <LCStory_Condition_MeltdownsResolved>已解除逆卡巴拉熔毁数</LCStory_Condition_MeltdownsResolved>
   <LCStory_Condition_Examination>综合考核</LCStory_Condition_Examination>
   <LCStory_Condition_DepartmentPriority>优先发展部门</LCStory_Condition_DepartmentPriority>
   <LCStory_Condition_AnyNode>可替代发展路线</LCStory_Condition_AnyNode>

@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using System.Reflection;
 using HarmonyLib;
+using LCAnomalyCore.Buildings;
 using LCAnomalyCore.Comp;
 using LCAnomalyCore.Defs;
+using LCAnomalyCore.GameComponent;
 using LCAnomalyCore.Util;
 using LCAnomalyStory.Compatibility;
 using LCAnomalyStory.Components;
@@ -20,6 +23,9 @@ namespace LCAnomalyStory
             ManagedResearchUtility.ValidateBridgeConfiguration();
             CompAbnormality.OnAnyAbnormalityStudyCompleted += OnAbnormalityStudyCompleted;
             CompEgoExtractable.OnAnyEgoExtracted += OnEgoExtracted;
+            MapComponent_LCQliphothMeltdown.OnMeltdownWaveTriggered += OnMeltdownWaveTriggered;
+            Building_AbnormalityContainmentTerminal.OnAnyMeltdownResolved += OnMeltdownResolved;
+            Building_AbnormalityContainmentTerminal.OnAnyMeltdownBreached += OnMeltdownBreached;
             Log.Message("[LC Anomaly Story] RimWorld 1.7 progression framework initialized.");
         }
 
@@ -34,6 +40,21 @@ namespace LCAnomalyStory
         private static void OnEgoExtracted(CompEgoExtractable comp, EGO_TYPE egoType, ThingDef egoDef)
         {
             StoryComponents.Development?.RecordStatistic(GameComponent_CompanyDevelopment.StatisticEgoExtracted, 1L);
+        }
+
+        private static void OnMeltdownWaveTriggered(Map map, int meltdownLevel, List<Building_AbnormalityContainmentTerminal> triggered)
+        {
+            StoryComponents.Development?.RecordStatistic(GameComponent_CompanyDevelopment.StatisticMeltdownWaves, 1L);
+        }
+
+        private static void OnMeltdownResolved(Building_AbnormalityContainmentTerminal terminal)
+        {
+            StoryComponents.Development?.RecordStatistic(GameComponent_CompanyDevelopment.StatisticMeltdownsResolved, 1L);
+        }
+
+        private static void OnMeltdownBreached(Building_AbnormalityContainmentTerminal terminal, int lostPe)
+        {
+            StoryComponents.Development?.RecordStatistic(GameComponent_CompanyDevelopment.StatisticMeltdownsBreached, 1L);
         }
     }
 

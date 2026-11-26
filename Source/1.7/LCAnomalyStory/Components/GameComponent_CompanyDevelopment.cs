@@ -20,6 +20,7 @@ namespace LCAnomalyStory.Components
     public sealed class ExaminationRuntime : IExposable
     {
         public ExaminationStatus status;
+        public bool everPassed;
         public int startTick = -1;
         public int deadlineTick = -1;
         public int retryAvailableTick = -1;
@@ -34,6 +35,7 @@ namespace LCAnomalyStory.Components
         public void ExposeData()
         {
             Scribe_Values.Look(ref status, "status", ExaminationStatus.Inactive);
+            Scribe_Values.Look(ref everPassed, "everPassed", false);
             Scribe_Values.Look(ref startTick, "startTick", -1);
             Scribe_Values.Look(ref deadlineTick, "deadlineTick", -1);
             Scribe_Values.Look(ref retryAvailableTick, "retryAvailableTick", -1);
@@ -46,6 +48,10 @@ namespace LCAnomalyStory.Components
             Scribe_Collections.Look(ref stringState, "stringState", LookMode.Value, LookMode.Value);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
+                if (status == ExaminationStatus.Passed)
+                {
+                    everPassed = true;
+                }
                 EnsureCollections();
             }
         }
@@ -112,6 +118,9 @@ namespace LCAnomalyStory.Components
         public const string StatisticPeBoxProduced = "peBoxProduced";
         public const string StatisticEgoExtracted = "egoExtracted";
         public const string StatisticExaminationsPassed = "examinationsPassed";
+        public const string StatisticMeltdownWaves = "meltdownWaves";
+        public const string StatisticMeltdownsResolved = "meltdownsResolved";
+        public const string StatisticMeltdownsBreached = "meltdownsBreached";
 
         private int dataVersion = CurrentDataVersion;
         private int nextEvaluationTick;
@@ -344,7 +353,30 @@ namespace LCAnomalyStory.Components
 
         public bool IsExaminationPassed(CompanyExaminationDef examination)
         {
-            return examination != null && GetExaminationRuntime(examination).status == ExaminationStatus.Passed;
+            if (examination == null)
+            {
+                return false;
+            }
+            ExaminationRuntime runtime = GetExaminationRuntime(examination);
+            return runtime.everPassed || runtime.status == ExaminationStatus.Passed;
+        }
+
+        public bool IsExaminationNodePrerequisitesMet(CompanyExaminationDef examination)
+        {
+            if (examination == null)
+            {
+                return false;
+            }
+            foreach (CompanyDevelopmentDef node in DefDatabase<CompanyDevelopmentDef>.AllDefsListForReading)
+            {
+                if (node.conditions != null
+                    && node.conditions.OfType<Conditions.DevelopmentCondition_ExaminationPassed>().Any(condition => condition.examination == examination)
+                    && (IsCompleted(node) || node.PrerequisitesCompleted(this)))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool CanStartExamination(CompanyExaminationDef examination)
@@ -354,6 +386,16 @@ namespace LCAnomalyStory.Components
         }
 
         public bool CanStartExamination(CompanyExaminationDef examination, out string rejectionReason)
+        {
+            return CanStartExaminationInternal(examination, allowRepeatable: false, out rejectionReason);
+        }
+
+        public bool CanStartRepeatableExamination(CompanyExaminationDef examination, out string rejectionReason)
+        {
+            return CanStartExaminationInternal(examination, allowRepeatable: true, out rejectionReason);
+        }
+
+        private bool CanStartExaminationInternal(CompanyExaminationDef examination, bool allowRepeatable, out string rejectionReason)
         {
             rejectionReason = null;
             if (examination == null)
@@ -367,7 +409,7 @@ namespace LCAnomalyStory.Components
                 return false;
             }
             ExaminationRuntime runtime = GetExaminationRuntime(examination);
-            if (runtime.status == ExaminationStatus.Passed)
+            if (!allowRepeatable && (runtime.everPassed || runtime.status == ExaminationStatus.Passed))
             {
                 rejectionReason = "LCStory_ExamStartAlreadyPassed".Translate();
                 return false;
@@ -398,8 +440,18 @@ namespace LCAnomalyStory.Components
 
         public bool StartExamination(CompanyExaminationDef examination)
         {
+            return StartExaminationInternal(examination, allowRepeatable: false);
+        }
+
+        public bool StartRepeatableExamination(CompanyExaminationDef examination)
+        {
+            return StartExaminationInternal(examination, allowRepeatable: true);
+        }
+
+        private bool StartExaminationInternal(CompanyExaminationDef examination, bool allowRepeatable)
+        {
             string rejectionReason;
-            if (!CanStartExamination(examination, out rejectionReason))
+            if (!CanStartExaminationInternal(examination, allowRepeatable, out rejectionReason))
             {
                 return false;
             }
@@ -425,7 +477,7 @@ namespace LCAnomalyStory.Components
                 Log.Error("[LC Anomaly Story] Examination worker OnStarted failed for " + examination.defName + ": " + exception);
                 if (runtime.status == ExaminationStatus.Active)
                 {
-                    runtime.status = ExaminationStatus.Inactive;
+                    runtime.status = runtime.everPassed ? ExaminationStatus.Passed : ExaminationStatus.Inactive;
                     activeExaminationCache = null;
                     runtime.nextWorkerTick = -1;
                     runtime.lastOutcomeReason = "LCStory_ExamStartWorkerError".Translate();
@@ -433,7 +485,7 @@ namespace LCAnomalyStory.Components
                     runtime.startTick = -1;
                     runtime.deadlineTick = -1;
                 }
-                return runtime.status != ExaminationStatus.Inactive;
+                return runtime.status == ExaminationStatus.Active;
             }
 
             if (runtime.status != ExaminationStatus.Active)
@@ -457,6 +509,7 @@ namespace LCAnomalyStory.Components
 
             ExaminationRuntime runtime = GetExaminationRuntime(examination);
             runtime.status = ExaminationStatus.Passed;
+            runtime.everPassed = true;
             activeExaminationCache = null;
             runtime.retryAvailableTick = -1;
             runtime.nextWorkerTick = -1;

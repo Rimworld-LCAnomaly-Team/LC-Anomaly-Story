@@ -24,4 +24,8 @@
   <LCStory_Directive_ExtractionEgoForging.description>在研发部监督下生产三十点 PE-Box 并提取一件 E.G.O 装备。</LCStory_Directive_ExtractionEgoForging.description>
   <LCStory_Directive_ArchitectureFacilitySynthesis.label>设施综合配额</LCStory_Directive_ArchitectureFacilitySynthesis.label>
   <LCStory_Directive_ArchitectureFacilitySynthesis.description>完成十次有效工作、五次“优”评级工作并生产六十点 PE-Box，验证终局设施就绪度。</LCStory_Directive_ArchitectureFacilitySynthesis.description>
+  <LCStory_Directive_ControlMeltdownResponse.label>熔毁应急演练</LCStory_Directive_ControlMeltdownResponse.label>
+  <LCStory_Directive_ControlMeltdownResponse.description>在倒计时结束前及时响应并解除两次逆卡巴拉熔毁警报。</LCStory_Directive_ControlMeltdownResponse.description>
+  <LCStory_Directive_CentralMeltdownContainment.label>中央过载稳态协议</LCStory_Directive_CentralMeltdownContainment.label>
+  <LCStory_Directive_CentralMeltdownContainment.description>解除四次逆卡巴拉熔毁警报并在全设施完成六次有效异想体工作。</LCStory_Directive_CentralMeltdownContainment.description>
 </LanguageData>

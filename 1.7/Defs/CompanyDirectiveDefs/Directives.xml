@@ -262,4 +262,47 @@
       </li>
     </objectives>
   </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_ControlMeltdownResponse</defName>
+    <label>Meltdown emergency drill</label>
+    <description>Resolve two Qliphoth Meltdown containment alerts before timers expire.</description>
+    <minimumPhase>1</minimumPhase>
+    <department>LCStory_Control</department>
+    <durationTicks>60000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>0.9</selectionWeight>
+    <departmentExperience>2</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_MeltdownsResolved</labelKey>
+        <statistic>meltdownsResolved</statistic>
+        <target>2</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_CentralMeltdownContainment</defName>
+    <label>Central overload stabilization</label>
+    <description>Resolve four Qliphoth Meltdown alerts and complete six valid containment works across the facility.</description>
+    <minimumPhase>3</minimumPhase>
+    <department>LCStory_CentralCommand</department>
+    <durationTicks>75000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>0.9</selectionWeight>
+    <departmentExperience>3</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_MeltdownsResolved</labelKey>
+        <statistic>meltdownsResolved</statistic>
+        <target>4</target>
+      </li>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_ValidWorks</labelKey>
+        <statistic>validWorks</statistic>
+        <target>6</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
 </Defs>
