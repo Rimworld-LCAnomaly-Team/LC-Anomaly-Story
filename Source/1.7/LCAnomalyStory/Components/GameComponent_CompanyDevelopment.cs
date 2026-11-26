@@ -121,6 +121,7 @@ namespace LCAnomalyStory.Components
         public const string StatisticMeltdownWaves = "meltdownWaves";
         public const string StatisticMeltdownsResolved = "meltdownsResolved";
         public const string StatisticMeltdownsBreached = "meltdownsBreached";
+        public const string StatisticAbnormalitiesExtracted = "abnormalitiesExtracted";
 
         private int dataVersion = CurrentDataVersion;
         private int nextEvaluationTick;

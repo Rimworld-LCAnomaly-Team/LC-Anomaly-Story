@@ -63,7 +63,7 @@
   <LCStory_Reward_CoreSuppression_Hod>核心抑制（培训部）：全设施四维工作经验获取永久 +50%</LCStory_Reward_CoreSuppression_Hod>
   <LCStory_Reward_CoreSuppression_Netzach>核心抑制（安保部）：所有部门核心燃料消耗 -30% 且获得精神恢复能力</LCStory_Reward_CoreSuppression_Netzach>
   <LCStory_Reward_CoreSuppression_Gebura>核心抑制（惩戒部）：全设施 E.G.O 提取上限永久 +1 且战术子弹上限 +2</LCStory_Reward_CoreSuppression_Gebura>
-  <LCStory_Reward_CoreSuppression_Binah>核心抑制（研发部）：全设施 E.G.O 消耗永久额外 -20% 且战术子弹充能加速</LCStory_Reward_CoreSuppression_Binah>
+  <LCStory_Reward_CoreSuppression_Binah>核心抑制（研发部）：全设施 E.G.O 消耗永久额外 -20%、战术子弹加速充能、免费二次提取与 -30% 提取冷却</LCStory_Reward_CoreSuppression_Binah>
   <LCStory_ResearchManagedExternally>{0} 由公司发展系统接管。</LCStory_ResearchManagedExternally>
   <LCStory_NodeCompletedTitle>发展完成：{0}</LCStory_NodeCompletedTitle>
   <LCStory_NodeCompletedText>公司已经完成“{0}”发展节点。</LCStory_NodeCompletedText>
@@ -74,4 +74,5 @@
   <LCStory_DirectiveCompleted>指令完成：{0}</LCStory_DirectiveCompleted>
   <LCStory_DirectiveFailed>指令失败：{0}</LCStory_DirectiveFailed>
   <LCStory_DepartmentPriority>优先部门：{0}</LCStory_DepartmentPriority>
+  <LCStory_Condition_AbnormalitiesExtracted>提取 {0} 份异想体收容匣</LCStory_Condition_AbnormalitiesExtracted>
 </LanguageData>

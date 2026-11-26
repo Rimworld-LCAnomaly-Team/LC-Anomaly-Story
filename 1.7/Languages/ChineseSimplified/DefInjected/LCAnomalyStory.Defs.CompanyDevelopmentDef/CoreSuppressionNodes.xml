@@ -11,5 +11,5 @@
   <LCStory_Node_SuppressGebura.label>惩戒部核心抑制</LCStory_Node_SuppressGebura.label>
   <LCStory_Node_SuppressGebura.description>通过惩戒部核心抑制考核，全设施 E.G.O 最大提取上限永久 +1，主管战术子弹上限 +2。</LCStory_Node_SuppressGebura.description>
   <LCStory_Node_SuppressBinah.label>研发部核心抑制</LCStory_Node_SuppressBinah.label>
-  <LCStory_Node_SuppressBinah.description>通过研发部核心抑制考核，全设施 E.G.O 提取消耗永久额外降低 20% 且战术子弹充能加速。</LCStory_Node_SuppressBinah.description>
+  <LCStory_Node_SuppressBinah.description>通过研发部核心抑制考核，全设施 E.G.O 提取消耗永久额外降低 20%、战术子弹充能加速，并永久解锁每轮异想体免费“二次提取”与额外 -30% 提取冷却。</LCStory_Node_SuppressBinah.description>
 </LanguageData>

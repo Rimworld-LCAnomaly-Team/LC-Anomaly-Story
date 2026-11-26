@@ -118,7 +118,7 @@
   <LCAnomalyStory.Defs.CompanyDevelopmentDef>
     <defName>LCStory_Node_SuppressBinah</defName>
     <label>Extraction Core Suppression</label>
-    <description>Overcome the Extraction Team Core Suppression to permanently grant an additional -20% E.G.O PE-Box extraction discount and faster Manager Bullet recharge.</description>
+    <description>Overcome the Extraction Team Core Suppression to permanently grant an additional -20% E.G.O PE-Box extraction discount, faster Manager Bullet recharge, free Abnormality Re-Extraction once per draw, and -30% Abnormality extraction cooldown.</description>
     <phase>5</phase>
     <displayOrder>96</displayOrder>
     <kind>StageGate</kind>

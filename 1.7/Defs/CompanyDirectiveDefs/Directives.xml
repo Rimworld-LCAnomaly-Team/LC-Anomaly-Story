@@ -305,4 +305,42 @@
       </li>
     </objectives>
   </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_ExtractionWellProtocol</defName>
+    <label>Extraction well intake</label>
+    <description>Extract one new Abnormality container through the Extraction Well or Cogito Bucket protocol.</description>
+    <minimumPhase>1</minimumPhase>
+    <department>LCStory_Control</department>
+    <durationTicks>60000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>1.0</selectionWeight>
+    <departmentExperience>1</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_AbnormalitiesExtracted</labelKey>
+        <statistic>abnormalitiesExtracted</statistic>
+        <target>1</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
+
+  <LCAnomalyStory.Defs.CompanyDirectiveDef>
+    <defName>LCStory_Directive_ExtractionTeamDeepDraw</defName>
+    <label>Deep well resonance sweep</label>
+    <description>Extract two Abnormality containers under Extraction Team protocols.</description>
+    <minimumPhase>4</minimumPhase>
+    <department>LCStory_Extraction</department>
+    <durationTicks>75000</durationTicks>
+    <cooldownTicks>30000</cooldownTicks>
+    <selectionWeight>0.9</selectionWeight>
+    <departmentExperience>3</departmentExperience>
+    <objectives>
+      <li Class="LCAnomalyStory.Defs.DirectiveObjective_Statistic">
+        <labelKey>LCStory_Condition_AbnormalitiesExtracted</labelKey>
+        <statistic>abnormalitiesExtracted</statistic>
+        <target>2</target>
+      </li>
+    </objectives>
+  </LCAnomalyStory.Defs.CompanyDirectiveDef>
 </Defs>

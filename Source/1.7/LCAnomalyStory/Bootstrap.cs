@@ -26,6 +26,7 @@ namespace LCAnomalyStory
             MapComponent_LCQliphothMeltdown.OnMeltdownWaveTriggered += OnMeltdownWaveTriggered;
             Building_AbnormalityContainmentTerminal.OnAnyMeltdownResolved += OnMeltdownResolved;
             Building_AbnormalityContainmentTerminal.OnAnyMeltdownBreached += OnMeltdownBreached;
+            MapComponent_LCExtraction.OnAnyAbnormalityExtracted += OnAbnormalityExtracted;
             Log.Message("[LC Anomaly Story] RimWorld 1.7 progression framework initialized.");
         }
 
@@ -55,6 +56,11 @@ namespace LCAnomalyStory
         private static void OnMeltdownBreached(Building_AbnormalityContainmentTerminal terminal, int lostPe)
         {
             StoryComponents.Development?.RecordStatistic(GameComponent_CompanyDevelopment.StatisticMeltdownsBreached, 1L);
+        }
+
+        private static void OnAbnormalityExtracted(Map map, LCExtractionTier tier, ThingDef chosenDef, Thing spawnedEgg)
+        {
+            StoryComponents.Development?.RecordStatistic(GameComponent_CompanyDevelopment.StatisticAbnormalitiesExtracted, 1L);
         }
     }
 
